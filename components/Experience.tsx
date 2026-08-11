@@ -3,9 +3,7 @@ import { jobs } from "@/content/jobs";
 export function Experience() {
   return (
     <section className="flex flex-col gap-6">
-      <h2 className="text-sm font-medium tracking-wide text-muted uppercase">
-        Experience
-      </h2>
+      <h2 className="font-mono text-sm text-muted">// experience</h2>
       <div className="flex flex-col gap-6">
         {jobs.map((job) => (
           <div key={`${job.company}-${job.role}`} className="flex flex-col gap-1">
