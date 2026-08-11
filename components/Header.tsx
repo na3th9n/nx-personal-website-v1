@@ -1,15 +1,35 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { site } from "@/content/site";
 import { GitHubIcon, LinkedInIcon, MailIcon } from "@/components/icons";
 
+// Milliseconds between each typed character in the name animation.
+const TYPE_SPEED_MS = 90;
+
 export function Header() {
+  const [typed, setTyped] = useState("");
+  const finishedTyping = typed.length >= site.name.length;
+
+  useEffect(() => {
+    if (finishedTyping) return;
+    const timeout = setTimeout(() => {
+      setTyped(site.name.slice(0, typed.length + 1));
+    }, TYPE_SPEED_MS);
+    return () => clearTimeout(timeout);
+  }, [typed, finishedTyping]);
+
   return (
     <header className="flex flex-col gap-2">
-      <div className="flex items-center justify-between gap-4">
-        <h1 className="glow-text text-4xl font-semibold tracking-tight sm:text-5xl">
-          {site.name}
-          <span className="cursor-blink text-accent" aria-hidden="true">
-            _
-          </span>
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <h1 className="glow-text flex items-center text-6xl font-semibold tracking-tight sm:text-7xl">
+          {typed}
+          <span
+            className={`ml-2 inline-block h-[0.85em] w-[0.5em] bg-white ${
+              finishedTyping ? "cursor-blink" : ""
+            }`}
+            aria-hidden="true"
+          />
         </h1>
         <nav className="flex items-center gap-4 text-muted">
           <a
