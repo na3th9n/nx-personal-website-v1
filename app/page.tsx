@@ -5,11 +5,13 @@ import { Projects } from "@/components/Projects";
 
 export default function Home() {
   return (
-    <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-12 px-6 py-16">
+    <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-12 px-6 py-16 sm:py-24">
       <Header />
-      <About />
-      <Experience />
-      <Projects />
+      <div className="flex flex-col gap-12 divide-y divide-border [&>*+*]:pt-12">
+        <About />
+        <Experience />
+        <Projects />
+      </div>
     </main>
   );
 }

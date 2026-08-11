@@ -8,20 +8,30 @@ export interface Job {
   description: string;
 }
 
-// Placeholder entries — swap in real work history.
+// Auto-generated placeholder entries — swap in real work history later.
 export const jobs: Job[] = [
   {
-    company: "Company Name",
-    role: "Role Title",
+    company: "Acme Corp",
+    role: "Software Engineer",
     start: "2023",
     end: "Present",
-    description: "Placeholder description of what you did in this role.",
+    description:
+      "Built and maintained internal tools and customer-facing features across the stack, working closely with product and design to ship iteratively.",
   },
   {
-    company: "Previous Company",
-    role: "Previous Role Title",
-    start: "2021",
+    company: "Globex Inc.",
+    role: "Software Engineer Intern",
+    start: "2022",
     end: "2023",
-    description: "Placeholder description of what you did in this role.",
+    description:
+      "Contributed to a small team shipping a web app end to end, from API design to frontend implementation and deployment.",
+  },
+  {
+    company: "University Project Lab",
+    role: "Research Assistant",
+    start: "2021",
+    end: "2022",
+    description:
+      "Prototyped and evaluated tooling for a research project, focusing on data pipelines and reproducible experiments.",
   },
 ];

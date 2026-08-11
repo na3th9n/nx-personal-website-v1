@@ -12,14 +12,24 @@ export interface SiteContent {
   techStack: string[];
 }
 
+// Auto-generated placeholder copy — swap in your real details later.
 export const site: SiteContent = {
   name: "Nathan Xie",
-  tagline: "Placeholder tagline — one line about what you do.",
-  bio: "Placeholder bio — a couple sentences about who you are and what you build.",
+  tagline: "Software engineer who likes building things end to end.",
+  bio: "I'm a software engineer who enjoys turning ideas into working products, from backend systems to the UI that sits on top of them. Lately I've been spending most of my time in TypeScript, exploring how far a small, well-considered toolset can go.",
   social: {
     linkedin: "https://linkedin.com/in/your-handle",
     github: "https://github.com/your-handle",
     email: "mailto:you@example.com",
   },
-  techStack: ["TypeScript", "React", "Next.js", "Node.js"],
+  techStack: [
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Python",
+    "PostgreSQL",
+    "Tailwind CSS",
+    "Docker",
+  ],
 };
